@@ -30,7 +30,8 @@ function keyboardKlick(key)
    }
    if(sounds[key])
    {
-   var audio= new Audio("./sounds/"+sounds[key]);
+   var audio = new Audio("./" + sounds[key]);
+
    audio.play();
    }
 }
@@ -38,6 +39,7 @@ function animationKey(currentKey)
 {
 
     var activKey=document.querySelector("."+currentKey);
+    if (!activKey) return;
 
     activKey.classList.add("pressed");
     document.body.style.backgroundColor="purple";
